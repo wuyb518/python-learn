@@ -25,8 +25,12 @@ for x in dict2.items():
 
 print dict2.keys()
 print dict2.values()
-print dict2.pop(dict2['a'])
+print dict2.pop('a',44444)
 print dict2.popitem() #随机返回并删除一个键值对
+dict3={}
+dict3.update(dict2)
+print dict3
+
 
   
 
