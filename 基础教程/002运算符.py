@@ -1,4 +1,4 @@
-#!usr/bin/python
+#!/usr/bin/python
 # _*_coding:UTF-8 _*_
 
 # python算数运算符
@@ -36,5 +36,14 @@ print 2 in (1,2),3 in (1,2)
 print 2 not in(1,2),3 not in(1,2)
 
 # 身份运算符
-print 2 is Number
+a=20
+b=20
+
+if(a is b):
+    print '1-a 和 b 有相同的标识'
+else:
+    print '1-a 和 b 没有相同的标识'
+
+
+
 
