@@ -1,6 +1,7 @@
 #/usr/bin/python
 # _*_ coding:UTF-8 _*_
 
+import os
 # 输出到屏幕
 print 'print'
 
@@ -18,7 +19,7 @@ print 'print'
 
 # 文件
 
-fo=open('./test.txt','r+')
+fo=open('基础教程/012文件/test.txt','w+')
 print '文件名:',fo.name
 print '是否已关闭:',fo.closed
 print '访问模式:',fo.mode
@@ -28,3 +29,21 @@ fo.write('test write')
 
 fo.flush()
 fo.close()
+fo=open('基础教程/012文件/test.txt','r+')
+str=fo.read(50)
+print str
+print fo.tell()
+fo.seek(0,0)
+str=fo.read(4)
+print str
+fo.close()
+os.rename('基础教程/012文件/test.txt','基础教程/012文件/test1.txt')
+os.rename('基础教程/012文件/test1.txt','基础教程/012文件/test.txt')
+os.remove('基础教程/012文件/test.txt')
+if not os.chdir('testdir'):
+    os.mkdir('testdir')
+else:
+    pass
+if os.chdir('testdir'):
+    os.rmdir('testdir')
+
