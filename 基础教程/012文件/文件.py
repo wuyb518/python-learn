@@ -40,10 +40,10 @@ fo.close()
 os.rename('基础教程/012文件/test.txt','基础教程/012文件/test1.txt')
 os.rename('基础教程/012文件/test1.txt','基础教程/012文件/test.txt')
 os.remove('基础教程/012文件/test.txt')
-if not os.chdir('testdir'):
-    os.mkdir('testdir')
+if not os.chdir('基础教程/012文件/testdir'):
+    os.mkdir('基础教程/012文件/testdir')
 else:
     pass
-if os.chdir('testdir'):
-    os.rmdir('testdir')
+# if os.chdir('基础教程/012文件/testdir'):
+#     os.rmdir('基础教程/012文件/testdir')
 
