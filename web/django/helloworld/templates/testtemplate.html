@@ -1,0 +1,44 @@
+<h1>test template</h1>
+
+
+{% if name %}
+    <p>{{name}}</p>
+{% endif %}
+
+{% if friends %}
+    <p>friends:</p>
+    <ul>
+    {% for friend in friends %}
+        <li>{{friend}}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{% if friends %}
+    <p>friends(reversed):</p>
+    <ul>
+    {% for friend in friends reversed %}
+        <li>{{friend}}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{% ifequal name 'wuyb'%}
+    <p>name equal 'wuyb'</p>
+{% endifequal%}
+
+{# 这是一个注释 #}
+
+<p>过滤器</p>
+<p>{{'wuyb'|upper}}</p>
+<p>过滤器可以管道调用</p>
+<p>{{'Wuyb'|upper|lower|upper|lower}}</p>
+
+<p>{{friends|first|upper}}</p>
+
+<p>带参数的过滤器</p>
+<p>{{'sdfsdfssdfsdfsfsdf'|truncatewords:'5'}}</p>
+
+<p>引入其他模板</p>
+{% include 'nav.html' %}
+    

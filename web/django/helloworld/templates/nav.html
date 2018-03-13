@@ -1,0 +1,7 @@
+{% if nav %}
+    <ul>
+        {% for item in nav %}
+            <li>{{item|lower}}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
