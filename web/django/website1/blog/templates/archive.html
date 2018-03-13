@@ -1,0 +1,12 @@
+<p>list</p>
+{% if posts %}
+    {% for post in posts %}
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.body }}</p>
+        <p>{{ post.timestamp }}</p>
+        <hr>
+    {% endfor %}
+{% endif %}
+
+<a href="/blog/add">add</a>
+<a href="/blog/add_new">add_new</a>
